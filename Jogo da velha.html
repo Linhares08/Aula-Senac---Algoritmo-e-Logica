@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)file:///C:/Users/Aluno/Downloads/JOGO%20DA%20VELHA%20(1).html -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jogo da Velha</title>
+        <style>
+            .botaoJogoDaVelha{
+                height: 200px;
+                width: 200px;
+                position: static;
+                font-size: 180px;                
+            }
+            .tamanhoCampo{
+                padding-top: 4px;
+                height: 200px;
+            }
+            #container{
+                margin-top: 10px;
+            }
+            .coPreto{
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div class="tamanhoCampo">
+                <sapan><input id="d1" type="button" value=" " class="botaoJogoDaVelha" onclick="marcarComXouO('d1')"></sapan>
+                <sapan><input id="d2" type="button" value=" " class="botaoJogoDaVelha" onclick="marcarComXouO('d2')"></sapan>
+                <sapan><input id="d3" type="button" value=" " class="botaoJogoDaVelha" onclick="marcarComXouO('d3')"></sapan>
+            </div>
+            <div class="tamanhoCampo">
+                <sapan><input id="d4" type="button" value=" " class="botaoJogoDaVelha" onclick="marcarComXouO('d4')"></sapan>
+                <sapan><input id="d5" type="button" value=" " class="botaoJogoDaVelha" onclick="marcarComXouO('d5')"></sapan>
+                <sapan><input id="d6" type="button" value=" " class="botaoJogoDaVelha" onclick="marcarComXouO('d6')"></sapan>
+            </div>
+            <div class="tamanhoCampo">
+                <sapan><input id="d7" type="button" value=" " class="botaoJogoDaVelha" onclick="marcarComXouO('d7')"></sapan>
+                <sapan><input id="d8" type="button" value=" " class="botaoJogoDaVelha" onclick="marcarComXouO('d8')"></sapan>
+                <sapan><input id="d9" type="button" value=" " class="botaoJogoDaVelha" onclick="marcarComXouO('d9')"></sapan>
+            </div>
+            <div id="resultado"></div>
+        </div>
+        <script>         
+            window.jogada = "X";
+            function marcarComXouO(id)      
+            {
+                if( document.getElementById(id).value == " ")
+                if(window.jogada == "X"){
+                    document.getElementById(id).value = window.jogada;
+                    window.jogada = "O"; 
+                }else{
+                    document.getElementById(id).value = window.jogada;
+                    window.jogada = "X";                    
+                }
+                var d1 =  document.getElementById('d1').value 
+                var d2 =  document.getElementById('d2').value 
+                var d3 =  document.getElementById('d3').value 
+                var d4 =  document.getElementById('d4').value 
+                var d5 =  document.getElementById('d5').value 
+                var d6 =  document.getElementById('d6').value 
+                var d7 =  document.getElementById('d7').value 
+                var d8 =  document.getElementById('d8').value 
+                var d9 =  document.getElementById('d9').value 
+                var mensagemRetorno = "";  
+
+                if(d1 == "X" && d2 == "X" && d3 == "X"){
+                    mensagemRetorno = "O X foi o vencedor!"
+
+                    alert(mensagemRetorno);
+                }
+                if(d1 == "X" && d5 == "X" && d9 == "X"){
+                    mensagemRetorno = "O X foi o vencedor!"
+
+                    alert(mensagemRetorno);
+                }
+                if(d1 == "X" && d4 == "X" && d7 == "X"){
+                    mensagemRetorno = "O X foi o vencedor!"
+
+                    alert(mensagemRetorno);
+                }
+                if(d2 == "X" && d5 == "X" && d8 == "X"){
+                    mensagemRetorno = "O X foi o vencedor!"
+
+                    alert(mensagemRetorno);
+                }
+                if(d3 == "X" && d6 == "X" && d9 == "X"){
+                    mensagemRetorno = "O X foi o vencedor!"
+
+                    alert(mensagemRetorno);
+                }
+                if(d3 == "X" && d5 == "X" && d7 == "X"){
+                    mensagemRetorno = "O X foi o vencedor!"
+
+                    alert(mensagemRetorno);
+                }
+                if(d4 == "X" && d5 == "X" && d7 == "X"){
+                    mensagemRetorno = "O X foi o vencedor!"
+
+                    alert(mensagemRetorno);
+                }
+                if(d7 == "X" && d8 == "X" && d9 == "X"){
+                    mensagemRetorno = "O X foi o vencedor!"
+
+                    alert(mensagemRetorno);
+                }
+
+                if(d1 == "O" && d2 == "O" && d3 == "O"){
+                    mensagemRetorno = "O O foi o vencedor!"
+
+                    alert(mensagemRetorno);
+                }
+                if(d1 == "O" && d5 == "O" && d9 == "O"){
+                    mensagemRetorno = "O O foi o vencedor!"
+
+                    alert(mensagemRetorno);
+                }
+                if(d1 == "O" && d4 == "O" && d7 == "O"){
+                    mensagemRetorno = "O O foi o vencedor!"
+
+                    alert(mensagemRetorno);
+                }
+                if(d2 == "O" && d5 == "O" && d8 == "O"){
+                    mensagemRetorno = "O O foi o vencedor!"
+
+                    alert(mensagemRetorno);
+                }
+                if(d3 == "O" && d6 == "O" && d9 == "O"){
+                    mensagemRetorno = "O O foi o vencedor!"
+
+                    alert(mensagemRetorno);
+                }
+                if(d3 == "O" && d5 == "O" && d7 == "O"){
+                    mensagemRetorno = "O O foi o vencedor!"
+
+                    alert(mensagemRetorno);
+                }
+                if(d4 == "O" && d5 == "O" && d6 == "O"){
+                    mensagemRetorno = "O O foi o vencedor!"
+
+                    alert(mensagemRetorno);
+                }
+                if(d7 == "O" && d8 == "O" && d9 == "O"){
+                    mensagemRetorno = "O O foi o vencedor!"
+
+                    alert(mensagemRetorno);
+                }              
+                
+    
+
+            }                          
+        </script>
+    
+    </body>
+</html>
